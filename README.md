@@ -1,239 +1,226 @@
-# 🚢 Maritime Port Intelligence Platform
+# 🚢 Maritime Port Intelligence Platform (MPIP)
 
-An AI-powered maritime intelligence platform that delivers cargo forecasting, port congestion prediction, trade trend analytics, and an integrated Security Operations Center (SOC) for maritime domain awareness.
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## Overview
-
-The Maritime Port Intelligence Platform is a full-stack analytics solution designed for government agencies, maritime authorities, logistics operators, and enterprise stakeholders operating within the Indian Ocean region.
-
-The platform combines operational intelligence and cybersecurity monitoring into a single command center, enabling users to:
-
-- Forecast cargo volumes
-- Predict port congestion risks
-- Analyze import/export trade trends
-- Generate operational recommendations
-- Monitor cyber threats through an integrated SOC
-- Maintain DPDP-aligned audit visibility
-- Simulate secure inter-agency collaboration
+An AI-powered, full-stack maritime intelligence platform designed to deliver cargo forecasting, port congestion predictions, import/export trade analytics, and automated operational recommendations. The platform features an integrated **Security Operations Center (SOC)** to monitor cyber threats mapped to the MITRE ATT&CK framework, compliance checks aligned with the Indian DPDP Act 2023, and a secure multi-agency data collaboration simulation.
 
 ---
 
-## Key Features
+## 🌟 Executive Summary
 
-### Cargo Forecasting
-- 7-day cargo volume forecasting
-- Confidence scoring
-- Trend analysis (Bullish / Bearish / Neutral)
-- Upper and lower forecast bounds
-
-### Port Congestion Intelligence
-- Congestion risk scoring
-- Rolling z-score anomaly detection
-- Port-wise risk breakdown
-- 24-hour congestion outlook
-
-### Trade Analytics
-- Import/export trend analysis
-- EMA smoothing
-- Momentum scoring
-- Trade projections
-
-### AI Recommendation Engine
-- Priority-based advisories
-- Critical / High / Medium / Low recommendations
-- Operational decision support
-
-### Security Operations Center (SOC)
-- MITRE ATT&CK mapped threat alerts
-- Threat severity classification
-- Security posture dashboard
-- Compliance indicators
-
-### Data Governance
-- DPDP Act 2023 compliance indicators
-- Four-tier data classification framework
-- Tamper-evident audit logging
-- Secure collaboration simulation
+The Maritime Port Intelligence Platform (MPIP) acts as a centralized command center for port authorities, customs agencies, shipping lines, and maritime security operators. By bridging operational analytics and domain cybersecurity, MPIP converts fragmented datasets into secure, actionable decision points, aligning with global smart-port initiatives and national programs like India's *Sagarmala* and *Maritime India Vision 2030*.
 
 ---
 
-## Architecture
+## ⚙️ Core Modules & Features
 
-text User Browser      │      ▼ ┌───────────────────────────────┐ │ Streamlit Dashboard           │ │ Port 8501                     │ └──────────────┬────────────────┘                │                ▼ ┌───────────────────────────────┐ │ FastAPI Backend               │ │ Port 8000                     │ └──────┬───────────────┬────────┘        │               │        ▼               ▼  Forecast Engines   Security Engine        │               │        ▼               ▼  NumPy/Pandas      Audit Logs 
+The platform is structured around an **8-Module Core Framework** integrated into a single high-performance dashboard:
+
+### 1. Vessel Intelligence
+- **Deep Visibility:** Track real-time and historical vessel arrivals, flag distributions, and carrier fleet utilization.
+- **Vessel Profile Auditing:** Monitor registration details, vessel types, and flag-state security histories.
+
+### 2. Cargo Forecasting
+- **Time-Series Predictive Forecasting:** 7-day predictive forecasting of bulk, container, and liquid cargo volumes.
+- **Confidence Intervals:** Lower and upper forecast bounds with a color-coded confidence rating.
+- **Market Signals:** Instant trend categorization (e.g., Bullish, Bearish, Neutral) using EMA smoothing.
+
+### 3. Port Congestion Analytics
+- **Congestion Index Scoring:** Real-time port risk tracking scored out of 100.
+- **Risk Metrics:** Out-of-bounds anomaly warnings computed using rolling Z-Score analyses.
+- **Congestion Outlook:** A 24-hour forecast of turnaround times, queue delays, and berth occupancy.
+
+### 4. Trade Intelligence
+- **Import/Export Trade Flows:** Analyze commodity-wise trade lanes and cargo values.
+- **Momentum Gauges:** Calculate trade lane velocity using Exponential Moving Averages (EMA) to identify rising trade lanes.
+
+### 5. Incentive Engine
+- **Revenue Protection:** Automatically flag policy leakages, under-invoicing, and tariff-evasion anomalies.
+- **Incentive Simulator:** Model trade incentives (e.g., rebate policies, volume discounts) to optimize tariff frameworks.
+
+### 6. Digital Twin Simulation
+- **Port Operations Modeler:** Simulate weather disruptions, labor strikes, and machinery downtime.
+- **Stress-Test Scenarios:** Model how bottlenecks propagate through container yards and gates to test port resilience.
+
+### 7. AI Copilot
+- **Conversational Intelligence:** Ask natural language questions regarding port performance, vessel status, or cybersecurity metrics.
+- **Instant Query Compilation:** Generates structured parameters, mock API payloads, and query responses directly from backend databases.
+
+### 8. Executive Dashboard
+- **Operational Health Index (OHI):** A single unified gauge of overall port efficiency, combining vessel throughput, security flags, and queue status.
+- **Multi-Agency View:** A secure visualization console simulating shared indicators across custom agencies, port authorities, and naval security commands.
 
 ---
 
-## Technology Stack
+## 🛡️ Security, Governance & DPDP Compliance
 
-### Frontend
-- Streamlit
-- Plotly
+MPIP places paramount importance on cybersecurity and data privacy, integrating military-grade governance directly into operational reports.
 
-### Backend
-- FastAPI
-- Uvicorn
-- Pydantic
-
-### Data & Analytics
-- Pandas
-- NumPy
-
-### Security
-- MITRE ATT&CK Mapping
-- DPDP Compliance Framework
-- Audit Logging
-- Data Classification
+- **MITRE ATT&CK Threat Mapping:** SOC console categorizes cybersecurity alerts (such as database port scanning, spoofed AIS coordinates, or API brute-forcing) directly to MITRE tactics and techniques.
+- **Indian DPDP Act 2023 Compliance:** Automated compliance gauges audit data ingestion pipelines, checking consent records, purpose limitations, and cross-border transfer parameters.
+- **Four-Tier Data Classification:** All API data feeds are tagged according to sensitivity: *Public*, *Internal*, *Restricted*, or *Highly Sensitive*.
+- **Tamper-Evident Audit Logging:** Cryptographically simulated, time-stamped JSON logs tracking all user access, data uploads, and configuration changes.
 
 ---
 
-## Project Structure
+## 🏗️ Technical Architecture & Data Flow
+
+```text
+  ┌──────────────────────────────────────────────────────────┐
+  │                   User Browser Client                    │
+  └─────────────────────────────┬────────────────────────────┘
+                                │
+                      HTTP / WS │ Port 8501
+                                ▼
+  ┌──────────────────────────────────────────────────────────┐
+  │               Streamlit Dashboard Server                 │
+  │   - UI State Management                                  │
+  │   - Plotly Graphic Rendering                             │
+  │   - Session Configurations (.streamlit/config.toml)       │
+  └─────────────────────────────┬────────────────────────────┘
+                                │
+           JSON REST Requests   │ Port 8000 (Env: BACKEND_URL)
+                                ▼
+  ┌──────────────────────────────────────────────────────────┐
+  │                 FastAPI Backend Service                  │
+  │   - Route Dispatcher (main.py)                           │
+  │   - Module-Specific Controllers (routes/)                │
+  │   - Pydantic Ingestion Models                            │
+  └─────────────┬──────────────────────────────┬─────────────┘
+                │                              │
+                ▼                              ▼
+  ┌───────────────────────────┐  ┌───────────────────────────┐
+  │    Data Engine Services   │  │   Security & Audit Logs   │
+  │   - NumPy / Pandas Models │  │  - MITRE ATT&CK Mappers   │
+  │   - Forecasting Logic     │  │  - DPDP Compliance Check  │
+  │   - Digital Twin Engines  │  │  - Cryptographic Logs     │
+  └───────────────────────────┘  └───────────────────────────┘
+```
+
+---
+
+## 📂 Directory Layout
 
 ```text
 maritime-port-intelligence-platform/
-├── assets/                  # Logos and architecture diagram images
-├── backend/                 # FastAPI app
+├── assets/                  # Graphics, logos, and system architecture diagrams
+├── backend/                 # FastAPI service layer
 │   └── app/
-│       ├── routes/          # FastAPI API routers
-│       ├── services/        # Business logic & data services
-│       └── main.py          # FastAPI application entrypoint
-├── data/                    # Sample data for platform testing
+│       ├── routes/          # API routing modules (vessels, trade, SOC, etc.)
+│       ├── services/        # Analytical calculations, audit trails, and mock engines
+│       └── main.py          # FastAPI application entry point
+├── data/                    # Sample data sets
 │   └── sample_cargo_data.csv
-├── frontend/                # Streamlit app
-│   ├── .streamlit/          # Theme customization configuration
-│   └── app.py               # Streamlit application dashboard
-├── uploads/                 # Storage for user-uploaded CSV reports
-├── Dockerfile.backend       # Docker builder for the backend image
-├── Dockerfile.frontend      # Docker builder for the frontend image
-├── docker-compose.yml       # Docker orchestrator for multi-container run
-├── .env.example             # Env template configuration
-├── .gitignore               # Ignored files template
-├── requirements.txt         # Common python package dependencies
-├── LICENSE                  # Repository license (MIT)
-└── README.md                # System documentation and manuals
+├── frontend/                # Streamlit service layer
+│   ├── .streamlit/          # Streamlit UI configuration
+│   └── app.py               # Streamlit dashboard entry point
+├── uploads/                 # Temporary directory for uploaded CSV files
+├── Dockerfile.backend       # Docker build file for FastAPI app
+├── Dockerfile.frontend      # Docker build file for Streamlit dashboard
+├── docker-compose.yml       # Production-ready orchestration configuration
+├── .env.example             # Template file for environment configurations
+├── .gitignore               # Excludes virtual environments and file caches
+├── requirements.txt         # Global Python package dependencies
+├── LICENSE                  # MIT License details
+└── README.md                # Platform documentation (this file)
 ```
 
 ---
 
-## API Endpoints
+## 🚀 Quick Start & Deployment Guide
 
-### Health
-```http
-GET /health
-```
+### Option 1: Multi-Container Run with Docker Compose (Recommended)
 
-### Upload
-```http
-POST /upload/
-```
+Ensure you have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) installed on your machine.
 
-### Forecasting
-```http
-GET /forecast/cargo
-GET /forecast/congestion
-GET /forecast/trade
-GET /forecast/recommendations
-```
-
-### Security
-```http
-GET /security/audit-logs
-GET /security/classifications
-GET /security/threat-alerts
-GET /security/system-status
-GET /security/collaboration-status
-```
-
----
-
-## Deployment & Execution
-
-### Option 1: Run with Docker Compose (Recommended)
-
-To spin up the entire multi-container environment (FastAPI Backend + Streamlit Frontend) in one command:
-
-1. **Start Services:**
+1. **Clone the Repository:**
    ```bash
-   docker-compose up --build
+   git clone https://github.com/Vicky-cmd-run/maritime_port.git
+   cd maritime_port
    ```
-2. **Access the Applications:**
-   - **Frontend Dashboard:** [http://localhost:8501](http://localhost:8501)
-   - **Backend API Documentation (Swagger Docs):** [http://localhost:8000/docs](http://localhost:8000/docs)
-   - **Backend API Root:** [http://localhost:8000](http://localhost:8000)
+
+2. **Boot the Containers:**
+   Launch the microservices in detached mode:
+   ```bash
+   docker-compose up --build -d
+   ```
+
+3. **Access Services:**
+   - **Interactive Frontend:** Open [http://localhost:8501](http://localhost:8501)
+   - **FastAPI Backend Root:** Open [http://localhost:8000](http://localhost:8000)
+   - **Interactive API Swagger Docs:** Open [http://localhost:8000/docs](http://localhost:8000/docs)
+
+4. **Shutdown Services:**
+   ```bash
+   docker-compose down
+   ```
 
 ---
 
-### Option 2: Local Installation (Without Docker)
+### Option 2: Local Installation (For Development)
+
+Ensure you have Python 3.10+ installed.
 
 #### 1. Setup Virtual Environment
 ```bash
-python3 -m venv venv311
-source venv311/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 #### 2. Install Dependencies
 ```bash
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
 #### 3. Run FastAPI Backend
 ```bash
-uvicorn backend.app.main:app --reload --port 8000
+uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
-- **Backend API:** [http://localhost:8000](http://localhost:8000)
-- **API Docs:** [http://localhost:8000/docs](http://localhost:8000/docs)
+- The backend API will be available at `http://127.0.0.1:8000`
+- Interactive API Docs will be available at `http://127.0.0.1:8000/docs`
 
 #### 4. Run Streamlit Frontend
-In a new terminal window (with the virtual environment activated):
+Open a new terminal session, activate the virtual environment, and run:
 ```bash
 streamlit run frontend/app.py
 ```
-- **Dashboard UI:** [http://localhost:8501](http://localhost:8501)
+- The dashboard will open automatically in your browser at `http://localhost:8501`
 
 ---
 
-## Security Highlights
+## 📡 API Directory & Endpoint Documentation
 
-- MITRE ATT&CK aligned threat intelligence
-- DPDP Act 2023 compliance indicators
-- Four-level data classification
-- Tamper-evident audit trail
-- Secure collaboration framework
-- Input validation for uploads
-- No hardcoded secrets
+The backend service hosts fully documented REST endpoints:
 
----
+### System & Utilities
+* `GET /` - Root status check and module inventory count.
+* `GET /health` - Liveness/readiness check for container orchestration.
+* `POST /upload/` - Accepts custom multipart CSV reports. Validates structure, size, and records to the storage directory.
 
-## Future Enhancements
+### Analytics & Forecasters
+* `GET /vessels/live` - Current active vessel logs, flagged anomalies, and fleet allocations.
+* `GET /cargo/forecast` - 7-day predicted container, bulk, and liquid cargo volumes.
+* `GET /congestion/risk` - Current congestion indices, average delays, and rolling Z-score parameters.
+* `GET /trade/flows` - Real-time metrics for commodity trades, values, and EMA momentum calculations.
+* `GET /incentive/leakages` - Flagged policy leaks, under-invoicing anomalies, and recommended discount factors.
+* `GET /twin/simulations` - Stress-test results, simulation logs, and efficiency indicators.
+* `GET /executive/status` - Aggregates port statistics into the unified Port Operational Health Index.
 
-- PostgreSQL integration
-- JWT Authentication
-- Redis caching
-- Kubernetes deployment
-- Real AIS vessel tracking integration
-- Real-world customs and trade APIs
-- Advanced ML forecasting models
-
----
-
-## Use Cases
-
-- Port Operations Centers
-- Maritime Security Agencies
-- Government Maritime Departments
-- Logistics Operators
-- Supply Chain Intelligence Teams
-- Trade Monitoring Authorities
+### Security Operations Center (SOC)
+* `GET /security/threat-alerts` - Security logs mapped directly to MITRE ATT&CK tactics (Credential Access, Defense Evasion, etc.).
+* `GET /security/classifications` - Audits API feeds against the 4-tier data classification model.
+* `GET /security/audit-logs` - Displays cryptographic, tamper-evident user action logs.
+* `GET /security/collaboration-status` - Simulates state-level sharing metrics across multiple security divisions.
 
 ---
 
-## License
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Released under the MIT License.
-
----
-
-## Author
-
-Dweep Solanki
-
-Cybersecurity Professional | Maritime Intelligence | AI & Analytics | Security Operations
+## ✍️ Authors & Contributions
+- **Dweep Solanki** - *Creator & Cybersecurity Professional*
